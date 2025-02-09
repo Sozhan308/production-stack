@@ -46,13 +46,13 @@ jobs:
         run: |
           chmod +x ./utils/install-minikube-cluster.sh
           chmod +x ./utils/install-kubectl.sh
+          chmod +x ./utils/install-helm.sh
           chmod +x src/vllm_router/perf-test.sh
           chmod +x src/tests/perftest/*.sh
 
       - name: Setup Test environment
         run: |
-          ./utils/install-minikube-cluster.sh
-          ./utils/install-kubectl.sh
+          ./utils/install-minikube-cluster.sh minimal
 
       - name: Build and Load test Image
         run: |
