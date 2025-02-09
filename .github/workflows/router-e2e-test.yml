@@ -93,4 +93,3 @@ jobs:
             ~/.kube/config
             /tmp/minikube.log
             src/tests/perftest/logs
-           
