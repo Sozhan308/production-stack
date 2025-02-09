@@ -42,6 +42,13 @@ jobs:
           pip install -r requirements-test.txt
           pip install -e .
 
+      - name: Make scripts executable
+        run: |
+          chmod +x ./utils/install-minikube-cluster.sh
+          chmod +x ./utils/install-kubectl.sh
+          chmod +x src/vllm_router/perf-test.sh
+          chmod +x src/tests/perftest/*.sh
+
       - name: Setup Test environment
         run: |
           ./utils/install-minikube-cluster.sh
